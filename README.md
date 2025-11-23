@@ -9,13 +9,9 @@ VITyarthi-project-Library-Management-System/
 
 ├─ statement.md
 
-├─ src/
+├─ LMS.py
 
-│  └─ library_system.py
 
-└─ samples/
-
-   └─ sample_run.txt (optional: include screenshots in PDF report)
 
 **Features**
 
@@ -55,11 +51,11 @@ git clone https://github.com/anubhavkhare-vitb/VITyarthi-project-Library-Managem
 
 From the project root folder run:
 
-python src/LMS.py
+python LMS.py
 
 If your system requires python3 to run Python 3, use:
 
-python3 src/library_system.py
+python3 LMS.py
 
 Using the CLI
 
