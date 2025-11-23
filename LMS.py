@@ -1,4 +1,4 @@
-# Very Simple Library Management System
+#  Library Management System
 
 books = {}        # book_id -> {title, author, copies_total, copies_available}
 borrowers = {}    # borrower_id -> {name}
@@ -146,3 +146,4 @@ def main():
             print("Invalid choice.")
 
 main()
+
