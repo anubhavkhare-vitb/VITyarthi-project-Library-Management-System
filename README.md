@@ -2,14 +2,19 @@
 
 A minimal command-line Library Management System implemented in Python. This repository follows the VITyarthi BuildYourOwnProject submission guidelines and includes code, documentation, and sample runs for evaluation.
 
-Project structure:
+**Project structure:**
 
 VITyarthi-project-Library-Management-System/
 ├─ README.md
+
 ├─ statement.md
+
 ├─ src/
+
 │  └─ library_system.py
+
 └─ samples/
+
    └─ sample_run.txt (optional: include screenshots in PDF report)
 
 **Features**
@@ -44,7 +49,7 @@ Git (optional, for cloning the repo)
 
 Clone the repository (optional)
 
-git clone https://github.com/anubhavkhare/VITyarthi-project-Library-Management-System.git
+git clone https://github.com/anubhavkhare-vitb/VITyarthi-project-Library-Management-System.git
 
 **Run the program**
 
