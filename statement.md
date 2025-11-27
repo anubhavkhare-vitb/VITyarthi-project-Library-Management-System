@@ -1,134 +1,126 @@
-**Project Title**
+## Project Statement
+Library Management System (Build Your Own Project)
 
-**Library Management System**
+1. Problem Definition
 
-Problem Statement
+For my project, I decided to create a simple Library Management System because I noticed that small student libraries and classroom book collections often have to manage everything manually. Even in clubs or small groups, maintaining books, tracking who borrowed what, and knowing what is available becomes confusing without a proper system.
+I wanted to build something lightweight, easy to run, and beginner-friendly that doesn't require databases or installation. So, I created a menu-based Python application that handles books, borrowers, issuing, and returns.
 
-Many small libraries (classroom libraries, club libraries, and personal collections) lack a lightweight, easy-to-run tool to track books, borrowers, issues and returns. The goal of this project is to build a simple, CLI-based library management system that demonstrates CRUD operations, basic reporting, and modular code design suitable for extension and evaluation.
+---
 
-**Target Users**
+2. Scope of the Project
 
-School/college classroom teachers running small reading corners
+The scope of my system is intentionally kept small and focused so that it remains simple and clean to use.
 
-Student clubs managing a few books
+In Scope:
 
-Beginners learning software engineering principles and version control
+* Adding books with basic details
+* Managing borrowers
+* Issuing and returning books
+* Showing reports like availability, active issues, and borrower history
+* Simple command-line interface
+* Modular Python structure
 
-**Scope of the Project**
+Out of Scope (Future Enhancements):
 
-Implement an in-memory CLI application supporting book and borrower management, issuing/returning books, and basic reports.
+* Full GUI interface
+* Login/authentication
+* Integration with database systems like SQLite
+* Cloud backup or multi-user system
+* Fine or penalty calculations
 
-Provide clear documentation (README.md and statement.md) to satisfy the VITyarthi BuildYourOwnProject template.
+I designed the system in a way that these additions can be made later without rewriting the whole program.
 
-Deliver code organized for easy extension (persistence, GUI, or web API).
+---
 
-High-level Features
+3. Project Objectives
 
-Book management (add, list, search)
+The main objectives I had while planning and building this project were:
 
-Borrower management (add)
+* To understand and apply modular programming in Python
+* To create a practically useful program with a clear workflow
+* To learn to structure files and functions properly
+* To use Git and maintain a clear commit history
+* To prepare documentation clearly and professionally
 
-Issue / Return flow with availability tracking
+This project was a good opportunity to convert my Python basics into a proper application.
 
-Reports: available books, currently issued books, borrower history
+---
 
-Simple, human-readable ID generation (B1, U1, I1)
+4. Tools and Technologies Used
 
-**Functional Requirements** 
+I wrote this project in Python 3 and used a basic code editor (VS Code).
+Git and GitHub were used to track progress and organize the project versions.
+For documentation, I used Markdown for the README and statement, and I prepared a detailed PDF report according to the BYOP guidelines.
+I kept the project simple so no additional frameworks or libraries were required.
 
-**User Management Module**
+---
 
-Add borrower
+5. Target Users
 
-Validate borrower IDs
+The system is mainly useful for small-scale or beginner-level library setups, such as:
 
-Book Management Module
+* Students maintaining personal or group book collections
+* Teachers handling classroom research books
+* Clubs and student communities
+* Anyone learning how a library system works technically
 
-Add book
+The interface is simple, so even non-technical users can understand the options easily.
 
-List books
+---
 
-Search books by title/author
+6. High-Level Features
 
-**Issue Management Module**
+The main features I implemented are:
 
-Issue book to borrower (decrement available copies)
+Book Management
+Users can add books, search for them, and view total vs available copies.
 
-Return book (increment available copies)
+Borrower Management
+Borrower profiles with auto-generated IDs.
 
-Track issue records and returned status
+Issue/Return Flow
+Books can only be issued if copies are available, and on return, availability is updated.
 
-**Reporting Module**
+Reports
+Shows available books, books currently issued, and borrower-specific issue history.
 
-Available books
+I designed these features to cover the core functions of a basic library system.
 
-Issued books
+---
 
-Borrower history
+7. Deliverables
 
-Non-Functional Requirements 
+The project submission includes:
 
-Usability: Simple CLI with numbered menu for easy evaluation.
+* The complete Python source code
+* README.md explaining how to run the project
+* This statement.md file
+* A fully detailed project report in PDF format following the official guidelines
+* The GitHub repository link showing all project commits and iterations
 
-Reliability: Prevent double-returns and issuing when no copies are available.
+These collectively represent the full project package.
 
-Maintainability: Modular functions and clear inline comments for easy extension.
+---
 
-Performance: Lightweight in-memory operations suitable for small datasets.
+8. System Overview
 
-Error handling: Validate numeric input and IDs; provide informative messages.
+The system is divided into modules to make it cleaner:
 
-**System Architecture**
+model.py stores the data structures.
+operations.py contains book, borrower, issue, and return logic.
+cli.py handles the main menu and user interaction.
+LMS.py runs the program.
 
-Single-process CLI Python app
+This modular separation helped me maintain clarity and also makes future improvements easier.
 
-In-memory data structures (dictionaries) as the primary storage model
+---
 
-Modules/functions map to features (books, borrowers, issues, reports)
+9. Conclusion
 
+Overall, this project allowed me to build a fully functional Library Management System using Python while practicing good coding habits like readability, modularity, and version control.
+It also helped me understand how to convert a simple idea into a structured application with proper documentation.
 
-**Data Model (summary)**
+I plan to extend this system in the future with data persistence, a graphical interface, and more advanced features as I keep learning.
 
-books : { book_id -> { title, author, copies_total, copies_available } }
 
-borrowers : { borrower_id -> { name } }
-
-issues : { issue_id -> { book_id, borrower_id, returned } }
-
-Implementation Details (brief)
-
-Language: Python 3.8+
-
-Code organization: src/LMS.py contains the CLI and functions
-
-ID generation strategy: simple incremental IDs prefixed by type (B/U/I)
-
-No external libraries required (standard library only)
-
-**Testing Strategy**
-
-Manual interactive testing following these test cases:
-
-Add a book -> verify listing and availability
-
-Add borrower -> verify borrower ID
-
-Issue book when copies exist -> copies decrement and issue record created
-
-Attempt to issue when no copies available -> operation blocked
-
-Return book -> returned flag set and copies incremented
-
-Attempt to return already returned issue -> operation blocked
-
-Document sample runs and include screenshots in the PDF report.
-
-**Future Enhancement**s
-
-JSON/CSV or SQLite persistence to save state between runs
-
-Web or GUI frontend
-
-Authentication & role-based access (librarian vs. borrower)
-
-Enhanced search (fuzzy matching) and sorting
