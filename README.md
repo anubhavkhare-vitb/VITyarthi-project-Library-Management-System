@@ -1,10 +1,3 @@
-Absolutely — here is the **enhanced README.md in plain text**, rewritten in **first-person tone**, sounding natural, authentic, and student-written, but still professional.
-No code blocks, no formatting — fully plain text.
-
----
-
-# README.md (Plain Text, First-Person Version)
-
 Library Management System (LMS)
 
 This project is a simple, modular Python-based Library Management System that I built as part of the Build Your Own Project coursework. I wanted to create something practical, easy to use, and beginner-friendly, so I designed the system as a menu-driven command-line application. It manages books, borrowers, book issuing/returns, and generates basic reports.
